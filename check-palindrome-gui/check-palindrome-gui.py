@@ -6,6 +6,7 @@ The check-palindrome made again with a simple gui using tkinter
 
 from tkinter import *
 from tkinter import ttk
+from sys import exit
 
 def checkIfPalindrome(*args):
     word = user_input.get()
@@ -37,4 +38,5 @@ for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
 word_entry.focus()
 
 root.bind("<Return>", checkIfPalindrome)
+root.bind("<Escape>", exit)
 root.mainloop()
