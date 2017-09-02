@@ -27,6 +27,7 @@ while True:
                 print("The file is not in the same directory!")
 
         string = file.read()
+        file.close()
         break
     else:
         print("Please enter a valid input!")
@@ -52,3 +53,5 @@ for i in word_dict.most_common():
     result_file.write("The word '%s' is used '%d' times.\n" % (i[0], i[1]))
 
 print("The results can also be found in results.txt file!")
+
+result_file.close()

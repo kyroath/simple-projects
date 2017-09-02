@@ -23,3 +23,5 @@ while True:
     file.write("The vowel count of '%s' is '%d'\n" % (word, vowel_count))
     print("Vowel count is:", vowel_count)
     break
+
+file.close()
