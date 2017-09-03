@@ -12,6 +12,11 @@ from os import startfile
 
 def checkIfPalindrome(*args):
     word = user_input.get()
+
+    if word == '':
+        result.set("Not Palindrome!")
+        return
+
     file_name = open("checked.txt", "a+")
     file_name.seek(0)
 
@@ -45,7 +50,7 @@ mainframe.grid(column=0, row=0, sticky="NWSE")
 mainframe.columnconfigure(0, weight=1)
 mainframe.rowconfigure(0, weight=1)
 
-user_input = StringVar()
+user_input = StringVar(value='')
 result = StringVar(value="You can use ENTER!")
 
 word_entry = ttk.Entry(mainframe, width=20, textvariable=user_input)
