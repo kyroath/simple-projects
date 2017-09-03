@@ -15,22 +15,19 @@ def checkIfPalindrome(*args):
     file_name = open("checked.txt", "a+")
     file_name.seek(0)
 
-    flag = False
-
     for words in file_name:
         words = ''.join(words.split())
 
         if word == words:
             result.set("Palindrome!")
-            flag = True
             file_name.close()
             return
-    if not flag:
-        if word == word[::-1]:
-            result.set("Palindrome!")
-            file_name.write(word + "\n")
-        else:
-            result.set("Not Palindrome")
+
+    if word == word[::-1]:
+        result.set("Palindrome!")
+        file_name.write(word + "\n")
+    else:
+        result.set("Not Palindrome")
     file_name.close()
 
 
