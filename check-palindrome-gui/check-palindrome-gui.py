@@ -42,7 +42,7 @@ def openTXT():
 
 
 root = Tk()
-root.title("Check if Palindrome")
+root.title("Palindrome Checker")
 
 mainframe = ttk.Frame(root, padding="3 3 12 12")
 mainframe.grid(column=0, row=0, sticky="NWSE")
